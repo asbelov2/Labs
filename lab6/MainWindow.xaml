@@ -1,0 +1,45 @@
+﻿<Window x:Class="lab6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab6"
+        mc:Ignorable="d"
+        Title="Oscilloscope Data Viewer" Height="899.7" Width="1600" ResizeMode="NoResize">
+    <Grid KeyDown="Grid_KeyDown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="795*"/>
+            <ColumnDefinition Width="799*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="32*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="Load" Content="Load csv" HorizontalAlignment="Left" Margin="714,10,0,0" VerticalAlignment="Top" Width="75" Click="Load_Click" Grid.Column="1"/>
+        <Label x:Name="freq" Content="Frequency: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Canvas x:Name="canvas" Opacity="0.5" HorizontalAlignment="Right" Width="1594" Grid.RowSpan="2" Height="830" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+            <Polyline Name="GraphA" Stroke="Blue" StrokeThickness="1" Height="810" Canvas.Left="10" Canvas.Top="10" Width="1574" Opacity="0.95"/>
+            <Polyline Name="GraphB" Stroke="Red" StrokeThickness="1" Height="810" Canvas.Left="10" Canvas.Top="10" Width="1574" Opacity="0.95"/>
+            <Polyline Name="GraphC" Stroke="Green" StrokeThickness="1" Height="810" Canvas.Left="10" Canvas.Top="10" Width="1574" Opacity="0.95"/>
+            <Polyline Name="GraphD" Stroke="Brown" StrokeThickness="1" Height="810" Canvas.Left="10" Canvas.Top="10" Width="1574" Opacity="0.95"/>
+        </Canvas>
+        <Label Content="From" HorizontalAlignment="Left" Margin="158,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="From" HorizontalAlignment="Left" Height="23" Margin="200,14,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="30" TextChanged="From_TextChanged" KeyDown="From_KeyDown"/>
+        <Label Content="To" HorizontalAlignment="Left" Margin="235,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="To" HorizontalAlignment="Left" Height="23" Margin="262,14,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="30" TextChanged="To_TextChanged" KeyDown="To_KeyDown"/>
+        <Label Content="sec" HorizontalAlignment="Left" Margin="297,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Build" Content="Build graph" HorizontalAlignment="Left" Margin="634,10,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.4,0.55" Click="Build_Click" IsEnabled="False" Grid.Column="1"/>
+        <Label x:Name="Right_Border" Content="" HorizontalAlignment="Left" Margin="714,419,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="Left_Border" Content="" HorizontalAlignment="Left" Margin="10,419,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Up_Border" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="10,380,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label x:Name="Down_Border" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="A" Content="A" HorizontalAlignment="Left" Margin="360,18,0,0" VerticalAlignment="Top" IsChecked="True" Focusable="False"/>
+        <CheckBox x:Name="B" Content="B" HorizontalAlignment="Left" Margin="393,18,0,0" VerticalAlignment="Top" IsChecked="True" Focusable="False"/>
+        <CheckBox x:Name="C" Content="C" HorizontalAlignment="Left" Margin="426,18,0,0" VerticalAlignment="Top" IsChecked="True" Focusable="False"/>
+        <CheckBox x:Name="D" Content="D" HorizontalAlignment="Left" Margin="459,18,0,0" VerticalAlignment="Top" IsChecked="True" Focusable="False"/>
+        <Label x:Name="Vertical_Bounds" Content="Vertical bounds: " HorizontalAlignment="Left" Margin="552,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="VTo" HorizontalAlignment="Left" Height="23" Margin="650,13,0,0" TextWrapping="Wrap" Text="-128" VerticalAlignment="Top" Width="35" TextChanged="VTo_TextChanged" KeyDown="VFrom_KeyDown"/>
+        <TextBox x:Name="VFrom" HorizontalAlignment="Left" Height="23" Margin="690,13,0,0" TextWrapping="Wrap" Text="128" VerticalAlignment="Top" Width="35" TextChanged="VFrom_TextChanged" KeyDown="VFrom_KeyDown"/>
+    </Grid>
+
+</Window>

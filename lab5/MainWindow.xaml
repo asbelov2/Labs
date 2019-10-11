@@ -1,0 +1,46 @@
+﻿<Window x:Class="lab5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab5"
+        mc:Ignorable="d"
+        Title="Students journal" Height="456" Width="808" ResizeMode="NoResize">
+    <Grid>
+        <ListBox x:Name="studentsList" HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="694" ItemsSource="{Binding}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}"                FontSize="16" FontWeight="Bold" FontFamily="Cambria" />
+                        <TextBlock TextWrapping="Wrap">
+                            <Run FontSize="14" FontWeight="Bold"  FontFamily="Cambria" >Group:</Run>
+                            <Run Text="{Binding Group}"               FontSize="14" />
+                        </TextBlock>
+                        
+                        <TextBlock Text="Math:"                         FontSize="10" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Math}"                FontSize="10" />
+                        <TextBlock Text="English:"                      FontSize="10" FontWeight="Bold" />
+                        <TextBlock Text="{Binding English}"             FontSize="10" />
+                        <TextBlock Text="Programming:"                  FontSize="10" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Programming}"         FontSize="10" />
+                        <TextBlock Text="Physical Education:"           FontSize="10" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Physical_education}"  FontSize="10" />
+                        <TextBlock Text="Physics:"                      FontSize="10" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Physics}"             FontSize="10" />
+                        <TextBlock Text="Art:"                          FontSize="10" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Art}"                 FontSize="10" />
+                        <TextBlock Text="Chemistry:"                    FontSize="10" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Chemistry}"           FontSize="10" />
+                        <TextBlock Text="Average score:"                FontSize="14" FontWeight="Bold" TextDecorations="Underline" />
+                        <TextBlock Text="{Binding Average_score}"       FontSize="14" FontWeight="Bold" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="New" Content="New" HorizontalAlignment="Left" Margin="709,10,0,0" VerticalAlignment="Top" Width="75" Click="New_Click"/>
+        <Button x:Name="Change" Content="Change" HorizontalAlignment="Left" Margin="709,35,0,0" VerticalAlignment="Top" Width="75" Click="Change_Click"/>
+        <Button x:Name="Delete" Content="Delete" HorizontalAlignment="Left" Margin="709,60,0,0" VerticalAlignment="Top" Width="75" Click="Delete_Click"/>
+        <Button x:Name="Refresh" Content="Refresh" HorizontalAlignment="Left" Margin="709,391,0,0" VerticalAlignment="Top" Width="75" Click="Refresh_Click"/>
+        <Button x:Name="Debtors" Content="Debtors" HorizontalAlignment="Left" Margin="709,85,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="Debtors_Click"/>
+    </Grid>
+</Window>

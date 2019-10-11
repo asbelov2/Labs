@@ -1,0 +1,19 @@
+﻿<Window x:Name="Window" x:Class="lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab2"
+        mc:Ignorable="d"
+        Title="RainAnimation" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="710"/>
+        <Label Content="Angle" HorizontalAlignment="Left" Margin="725,10,0,0" VerticalAlignment="Top" Height="30" Width="59"/>
+        <TextBox x:Name="Angle" HorizontalAlignment="Left" Height="23" Margin="725,45,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="59" KeyDown="Angle_KeyDown"/>
+        <TextBox x:Name="Speed" HorizontalAlignment="Left" Height="23" Margin="725,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" Text="4" KeyDown="Speed_KeyDown"/>
+        <Label Content="Speed" HorizontalAlignment="Left" Margin="725,73,0,0" VerticalAlignment="Top" Height="30" Width="59"/>
+        <Label Content="Level" HorizontalAlignment="Left" Margin="725,136,0,0" VerticalAlignment="Top" Height="30" Width="59"/>
+        <TextBox x:Name="Level" HorizontalAlignment="Left" Height="23" Margin="725,166,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="59" KeyDown="Level_KeyDown"/>
+
+    </Grid>
+</Window>
